@@ -24,3 +24,12 @@ $ rosbag play YOUR_PATH_TO_DATASET/MH_01_easy.bag
 3.1. Ue robbag play pause to debug
 $ rosbag play --pause YOUR_PATH_TO_DATASET/MH_01_easy.bag
 3.2. Hit "space" key to start/stop rosbag play.  
+
+4. Run event camera, davis 240c, dataset.  
+$ roslaunch vins_estimator davis_240c.launch  
+$ roslaunch vins_estimator vins_rviz.launch  
+$ rosbag play YOUR_PATH_TO_DATASET/MH_01_easy.bag  
+4.1. Ue robbag play pause to debug
+$ rosbag play --pause YOUR_PATH_TO_DATASET/MH_01_easy.bag
+4.2. Hit "space" key to start/stop rosbag play.  
+4.3. VINS saves estimated trajectory via .csv format. Modify the directory of .csv files by the parameter, output_path, in /VINS-Mono/config/${DATASET}/${YOUR_CONFIG}.yaml.  
